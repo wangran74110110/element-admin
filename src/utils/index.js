@@ -108,3 +108,9 @@ export function param2Obj(url) {
       '"}'
   )
 }
+
+// 用于对vue的data数据进行还原
+export function resetData(vm,key){
+  //this.page = $options.data().page
+  vm[key] = vm.$options.data()[key];
+}
